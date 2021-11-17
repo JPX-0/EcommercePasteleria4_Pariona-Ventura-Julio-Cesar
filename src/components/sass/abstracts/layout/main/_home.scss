@@ -9,26 +9,29 @@
   background-color: blanchedalmond;
   padding: 1rem;
   border: 0.2rem solid transparent;
-  width: 25rem;
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  text-align: center;
+  width: 23rem;
   transition: 0.3s;
   border-color: black;
   height: max-content;
+  cursor: context-menu;
+  position: relative;
   &:hover {
     box-shadow: 0 0 10px black;
   }
+  &:hover .btn__showItem {
+    opacity: 1;
+  }
   &__picture {
-    display: block;
-    height: 25rem;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    height: 20rem;
+    width: 20rem;
     border-radius: 0.5rem;
-    overflow: hidden;
+    background-color: white;
   }
   &__img {
     object-fit: contain;
-    margin: auto;
     width: 100%;
     height: 100%;
   }
@@ -36,12 +39,12 @@
     font-size: 2rem;
   }
   &__price {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   &__buttons {
     display: flex;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     gap: 0.5rem;
   }
   &__products {

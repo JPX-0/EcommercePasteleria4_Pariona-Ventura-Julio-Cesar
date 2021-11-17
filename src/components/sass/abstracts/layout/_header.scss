@@ -8,6 +8,7 @@
   right            : 0;
   top              : -6.5rem;
   transition       : 0.3s;
+  z-index: 10;
   &:hover {
     top: 0;
   }

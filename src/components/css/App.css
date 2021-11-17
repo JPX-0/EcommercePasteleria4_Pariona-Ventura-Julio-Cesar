@@ -24,11 +24,59 @@ footer {
   border: 0.2rem solid black;
 }
 
+.message {
+  font-size: 3rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.msg {
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+}
+.msg__cargando {
+  color: blue;
+}
+.msg__cargando::after {
+  content: "";
+  animation: textCargando 1s alternate infinite;
+}
+.msg__error {
+  color: red;
+}
+.msg__error::after {
+  content: "Ups! ocurrió un problema al intentar pedir los datos...";
+}
+.msg__completado {
+  color: green;
+}
+.msg__completado::after {
+  content: "✓ Se encontraron los productos";
+}
+
+.d-none {
+  display: none;
+}
+
+@keyframes textCargando {
+  0% {
+    content: "Cargando";
+  }
+  33% {
+    content: "Cargando.";
+  }
+  66% {
+    content: "Cargando..";
+  }
+  100% {
+    content: "Cargando...";
+  }
+}
 .btn {
   background-color: transparent;
   border: 0.2rem solid transparent;
   cursor: pointer;
-  font-size: 2rem;
   font-weight: bold;
   outline: none;
   text-transform: uppercase;
@@ -74,62 +122,75 @@ footer {
   border-color: black;
 }
 .btn__addToCar {
-  background-color: black;
-  color: white;
+  background-color: #333333;
+  font-size: 1.8rem;
   padding: 0.5rem;
   border-radius: 1rem;
   margin-top: 1rem;
-  opacity: 0.9;
+  color: white;
+  width: 90%;
 }
 .btn__addToCar:hover {
-  opacity: 1;
+  background-color: black;
 }
-
-.message {
-  font-size: 3rem;
-  margin-top: 1rem;
-  text-align: center;
+.btn__showItem {
+  position: absolute;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: max-content;
+  height: max-content;
+  margin: auto;
+  opacity: 0;
 }
-
-.msg {
-  font-size: 3rem;
-  text-align: center;
+.btn__showItem:hover {
+  background-color: black;
+  color: white;
+}
+.btn__closeAside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(0.5rem);
+  z-index: 5;
+  display: none;
 }
-.msg__cargando {
-  display: block;
-  color: blue;
+@media (max-width: 767px) {
+  .btn__closeAside--desktop {
+    display: none;
+  }
 }
-.msg__cargando::after {
-  content: "";
-  animation: textCargando 1s alternate infinite;
+.btn__closeAside--mobile {
+  display: none;
 }
-.msg__error {
-  display: block;
-  color: red;
-}
-.msg__error::after {
-  content: "Ups! ocurrió un problema al intentar pedir los datos...";
+@media (max-width: 767px) {
+  .btn__closeAside--mobile {
+    display: block;
+  }
 }
 
-.d-none {
+.aside {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 5rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: white;
+  z-index: 6;
   display: none;
 }
 
-@keyframes textCargando {
-  0% {
-    content: "Cargando";
-  }
-  33% {
-    content: "Cargando.";
-  }
-  66% {
-    content: "Cargando..";
-  }
-  100% {
-    content: "Cargando...";
-  }
-}
 .header {
   background-color: black;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -140,6 +201,7 @@ footer {
   right: 0;
   top: -6.5rem;
   transition: 0.3s;
+  z-index: 10;
 }
 .header:hover {
   top: 0;
@@ -204,27 +266,30 @@ footer {
   background-color: blanchedalmond;
   padding: 1rem;
   border: 0.2rem solid transparent;
-  width: 25rem;
-  display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  text-align: center;
+  width: 23rem;
   transition: 0.3s;
   border-color: black;
   height: max-content;
+  cursor: context-menu;
+  position: relative;
 }
 .card:hover {
   box-shadow: 0 0 10px black;
 }
+.card:hover .btn__showItem {
+  opacity: 1;
+}
 .card__picture {
-  display: block;
-  height: 25rem;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  height: 20rem;
+  width: 20rem;
   border-radius: 0.5rem;
-  overflow: hidden;
+  background-color: white;
 }
 .card__img {
   object-fit: contain;
-  margin: auto;
   width: 100%;
   height: 100%;
 }
@@ -232,12 +297,12 @@ footer {
   font-size: 2rem;
 }
 .card__price {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 .card__buttons {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   gap: 0.5rem;
 }
 .card__products {

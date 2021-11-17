@@ -1,0 +1,20 @@
+// █▄ ▄█ ██▀ ▄▀▄ ▄▀▀ █ █ █▀▄ ██▀ ▄▀▀ 
+// █ ▀ █ █▄▄ █▀█ ▄█▀ ▀▄█ █▀▄ █▄▄ ▄█▀ 
+$breakpoints: (
+  xs: 580px,
+  sm: 767px,
+  md: 991px,
+  h-xs: 360px,
+  h-sm: 450px,
+  h-md: 540px,
+);
+@mixin responsive($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+@mixin responsiveHeight($breakpoint) {
+  @media (max-height: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
