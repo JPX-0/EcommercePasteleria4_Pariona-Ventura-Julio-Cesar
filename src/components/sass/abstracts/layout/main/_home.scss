@@ -15,11 +15,11 @@
   height: max-content;
   cursor: context-menu;
   position: relative;
-  &:hover {
-    box-shadow: 0 0 10px black;
-  }
-  &:hover .btn__showItem {
+  &:hover .btn__showDetail {
     opacity: 1;
+  }
+  &:hover > &__picture &__img {
+    filter: blur(0.5rem);
   }
   &__picture {
     display: flex;

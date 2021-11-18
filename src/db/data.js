@@ -27,7 +27,7 @@ const data = [
     initial: 1,
     price: 15,
     pictureURL: `${product1}`,
-    description: "Descripcion 1"
+    description: "1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:2,
@@ -37,7 +37,7 @@ const data = [
     initial: 1,
     price: 25,
     pictureURL: `${product2}`,
-    description: "Descripcion 2"
+    description: "2 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:3,
@@ -47,7 +47,7 @@ const data = [
     initial: 1,
     price: 18,
     pictureURL: `${product3}`,
-    description: "Descripcion 3"
+    description: "3 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:4,
@@ -57,87 +57,87 @@ const data = [
     initial: 1,
     price: 18,
     pictureURL: `${product4}`,
-    description: "Descripcion 3"
+    description: "4- Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:5,
     title: "Titutlo 5",
     category: "",
-    stock: 8,
+    stock: 10,
     initial: 1,
     price: 18,
     pictureURL: `${product5}`,
-    description: "Descripcion 3"
+    description: "5 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:6,
     title: "Titutlo 6",
     category: "",
-    stock: 8,
+    stock: 1,
     initial: 1,
     price: 18,
     pictureURL: `${product6}`,
-    description: "Descripcion 3"
+    description: "6 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:7,
     title: "Titutlo 7",
     category: "",
-    stock: 8,
+    stock: 11,
     initial: 1,
     price: 18,
     pictureURL: `${product7}`,
-    description: "Descripcion 3"
+    description: "7 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:8,
     title: "Titutlo 8",
     category: "",
-    stock: 8,
+    stock: 7,
     initial: 1,
     price: 18,
     pictureURL: `${product8}`,
-    description: "Descripcion 3"
+    description: "8 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:9,
     title: "Titutlo 9",
     category: "",
-    stock: 8,
+    stock: 3,
     initial: 1,
     price: 18,
     pictureURL: `${product9}`,
-    description: "Descripcion 3"
+    description: "9 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:10,
     title: "Titutlo 10",
     category: "",
-    stock: 8,
+    stock: 21,
     initial: 1,
     price: 18,
     pictureURL: `${product10}`,
-    description: "Descripcion 3"
+    description: "10 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:11,
     title: "Titutlo 11",
     category: "",
-    stock: 8,
+    stock: 5,
     initial: 1,
     price: 18,
     pictureURL: `${product11}`,
-    description: "Descripcion 3"
+    description: "11 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:12,
     title: "Titutlo 12",
     category: "",
-    stock: 8,
+    stock: 6,
     initial: 1,
     price: 18,
     pictureURL: `${product12}`,
-    description: "Descripcion 3"
+    description: "12 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:13,
@@ -147,67 +147,67 @@ const data = [
     initial: 1,
     price: 18,
     pictureURL: `${product13}`,
-    description: "Descripcion 3"
+    description: "13 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:14,
     title: "Titutlo 14",
     category: "",
-    stock: 8,
+    stock: 9,
     initial: 1,
     price: 18,
     pictureURL: `${product14}`,
-    description: "Descripcion 3"
+    description: "14 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:15,
     title: "Titutlo 15",
     category: "",
-    stock: 8,
+    stock: 5,
     initial: 1,
     price: 18,
     pictureURL: `${product15}`,
-    description: "Descripcion 3"
+    description: "15 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:16,
     title: "Titutlo 16",
     category: "",
-    stock: 8,
+    stock: 10,
     initial: 1,
     price: 18,
     pictureURL: `${product16}`,
-    description: "Descripcion 3"
+    description: "16 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:17,
     title: "Titutlo 17",
     category: "",
-    stock: 8,
+    stock: 1,
     initial: 1,
     price: 18,
     pictureURL: `${product17}`,
-    description: "Descripcion 3"
+    description: "17 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:18,
     title: "Titutlo 18",
     category: "",
-    stock: 8,
+    stock: 1,
     initial: 1,
     price: 18,
     pictureURL: `${product18}`,
-    description: "Descripcion 3"
+    description: "18 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   },
   {
     id:19,
     title: "Titutlo 19",
     category: "",
-    stock: 8,
+    stock: 7,
     initial: 1,
     price: 18,
     pictureURL: `${product19}`,
-    description: "Descripcion 3"
+    description: "19 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit saepe neque autem unde totam commodi nam illo! Minus voluptas commodi distinctio optio autem iure?"
   }
 ];
 export default data;

@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ItemCount = (props) => {
   const [products, setProducts] = useState(props.initial);
   const [enStock, setEnStock] = useState(props.stock);
+  const addToCar = document.getElementById(`buy${props.id}`);
+  console.log(addToCar);
   if(enStock === 0) {
-    const addToCar = document.getElementById(props.id);
     addToCar.style.pointerEvents = "none";
     addToCar.style.color = "red";
     addToCar.style.opacity = "0.5";
@@ -32,7 +33,7 @@ const ItemCount = (props) => {
         <p className="card__products">Productos: {products}</p>
         <button onClick={increment} className="btn btn__count">+</button>
       </div>
-      <button onClick={onAdd} className="btn btn__addToCar" id={props.id}>Carrito +</button>
+      <button onClick={onAdd} className="btn btn__addToCar" id={`buy${props.id}`}>Carrito +</button>
     </>
   )};
 export default ItemCount;

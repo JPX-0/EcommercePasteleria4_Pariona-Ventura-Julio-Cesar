@@ -3,51 +3,48 @@ import ItemList from "./main/items/ItemList";
 import data from "../db/data";
 import ItemDetailContainer from "./main/details/ItemDetailContainer";
 
+let getDatos = (time, task) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (data) { //para simular un fallo en la llamada debe cambiar el valor a !data
+        resolve(task);
+      } else {
+        reject("Error")
+      }
+    }, time);
+  });
+}
+
+const styleAlerts = (tagDiv, addClass, removeClass1, removeClass2) => {
+  tagDiv.classList.add(addClass);
+  tagDiv.classList.remove(removeClass1);
+  tagDiv.classList.remove(removeClass2);
+}
+
 const ItemListContainer = () => {
   const [dt, setDt] = useState([])
-  let figurePromise = (time, task) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (data) {
-          resolve(task)
-        } else {
-          reject("Error")
-        }
-      }, time);
-    });
-  }
   useEffect(() => {
-    fetch(`../../../db/data.json`)
-    .then(res => res.json())
-    .then(res => console.log(res))
-    .catch(err => console.log(err))
     const messageData = document.querySelector("#messageData");
-    const styleAlerts = (addClass, removeClass1, removeClass2) => {
-      messageData.classList.add(addClass);
-      messageData.classList.remove(removeClass1);
-      messageData.classList.remove(removeClass2);
-    }
     const functionAlert = (alerta) => {
       if(alerta === "cargando") {
-        styleAlerts("msg__cargando", "msg__error", "msg__completado");
+        styleAlerts(messageData, "msg__cargando", "msg__error", "msg__completado");
       } else if (alerta === "error") {
-        styleAlerts("msg__error", "msg__completado", "msg__cargando");
+        styleAlerts(messageData, "msg__error", "msg__completado", "msg__cargando");
       } else if (alerta === "completado") {
-        styleAlerts("msg__completado", "msg__cargando", "msg__error");
+        styleAlerts(messageData, "msg__completado", "msg__cargando", "msg__error");
       } else {
         messageData.classList.add("d-none");
       }
     }
-    figurePromise(2000, functionAlert("cargando"))
-      .then(()=>figurePromise(0, console.log("Iniciando la carga de los productos...")))
-      .then(()=>figurePromise(0, data.map(d => console.log(d.id))))
-      .then(()=>figurePromise(0, data.map(d => console.log(d.title))))
-      .then(()=>figurePromise(0, data.map(d => console.log(d.description))))
-      .then(()=>figurePromise(0, data.map(d => console.log(d.price))))
-      .then(()=>figurePromise(0, data.map(d => console.log(d.pictureURL))))
-      .then(()=>figurePromise(1000, functionAlert("completado")))
-      .then(()=>figurePromise(0, functionAlert("none")))
-      .then(()=>figurePromise(0, setDt(data)))
+    getDatos(2000, functionAlert("cargando"))
+      .then(()=>getDatos(0, console.log("Iniciando la carga de los productos...")))
+      .then(()=>getDatos(0, data.map(d => console.log(d.title))))
+      .then(()=>getDatos(0, data.map(d => console.log(d.price))))
+      .then(()=>getDatos(0, data.map(d => console.log(d.pictureURL))))
+      .then(()=>getDatos(0, data.map(d => console.log(d.description))))
+      .then(()=>getDatos(1000, functionAlert("completado")))
+      .then(()=>getDatos(0, functionAlert("none"))) //elimina el mensaje de cargando, completdo y error.
+      .then(()=>getDatos(0, setDt(data)))
       .catch((err)=>{
         console.log(err);
         functionAlert("error");

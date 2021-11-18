@@ -1,12 +1,12 @@
 import Item from "./Item";
-import ShowItem from "../buttons/ShowItem";
+import OpenDetail from "../buttons/OpenDetail";
 
 const ItemList = (props) => {
 
   return (
     <>
-      <Item key={props.content.keyItem} content={props.content}/>
-      <ShowItem key={props.content.id} content={props.content}/>
+      <Item content={props.content}/>
+      <OpenDetail content={props.content}/>
     </>
   )}
 export default ItemList;

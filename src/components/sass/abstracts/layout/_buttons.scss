@@ -50,17 +50,18 @@
     font-size        : 1.8rem;
     padding: 0.5rem;
     border-radius: 1rem;
-    margin-top: 1rem;
+    margin: auto;
     color: white;
     width: 90%;
     &:hover {
       background-color: black;
     }
   }
-  &__showItem {
+  &__showDetail {
     position: absolute;
     padding: 1.5rem;
     border-radius: 1rem;
+    box-shadow: 0 0 0.5rem black;
     background-color: white;
     top: 0;
     right: 0;
@@ -79,22 +80,34 @@
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.05);
-    backdrop-filter  : blur(0.5rem);
-    z-index: 5;
-    display: none;
+    height: 100%;
+    z-index: -1;
     &--desktop {
       @include responsive(sm) {
         display: none;
       }
     }
     &--mobile {
+      z-index: 1;
       display: none;
       @include responsive(sm) {
-        display: block;
+        position: absolute;
+        border-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        top: -1rem;
+        right: -1rem;
+        padding: 1rem;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        &::after {
+          content: "X";
+          color: white;
+        }
       }
     }
   }
